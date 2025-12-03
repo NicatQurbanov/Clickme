@@ -1,0 +1,61 @@
+@use 'variables';
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    width: 55%;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 8fr 6fr;
+    height: 100vh;
+    a {
+        text-decoration: none;
+    }
+    form {
+        border: 1px solid black;
+        @include variables.flex($jus: center, $ali: space-around, $dir: column); 
+        padding: 20px;
+        gap: 50px;
+        &.sign-up-container {
+            background-color: variables.$blue;
+        }
+        h1 {
+            @include variables.text($size: 2.4rem)
+        }
+        button[type="submit"] {
+            width: 60%;
+            margin: 0 auto;
+            height: 50px;
+            color: white;
+            background-color: variables.$blue;
+            @include variables.text($size: 1rem);
+            border-radius: 5px;
+            border: none; 
+        }
+        input {
+            border: none;
+            border-bottom: 3px solid gray;
+            height: 35px;
+            &::placeholder {
+                padding: 20px;
+            }
+        }
+        .container {
+            @include variables.flex($jus: space-between);
+            .checkbox {
+               @include variables.flex();
+               gap: 5px;
+            }
+        }
+        .links {
+            @include variables.flex($jus: space-around)
+        }
+    }
+}
+
+
