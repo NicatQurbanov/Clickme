@@ -15,7 +15,6 @@ body main {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 8fr 6fr;
-  height: 100vh;
 }
 body main button {
   cursor: pointer;
@@ -24,11 +23,13 @@ body main a {
   text-decoration: none;
 }
 body main form {
+  transition: all 0.5s ease;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: unset;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
   padding: 20px;
 }
 body main form i {
@@ -44,6 +45,21 @@ body main form .input-wrapper {
   border-bottom: 2px solid rgb(152, 169, 192);
   padding: 5px;
 }
+body main form .input-wrapper input {
+  margin-left: 5px;
+  border: none;
+  height: 35px;
+  display: block;
+  outline: none;
+  font-size: 0.8rem;
+  width: 100%;
+}
+body main form .input-wrapper input::-moz-placeholder {
+  padding: 5px;
+}
+body main form .input-wrapper input::placeholder {
+  padding: 5px;
+}
 body main form .input-wrapper .fa-eye-slash {
   cursor: pointer;
 }
@@ -51,7 +67,6 @@ body main form .input-wrapper .fa-eye-slash:hover {
   color: rgb(82, 116, 255);
 }
 body main form button[type=submit] {
-  margin: 0 auto;
   height: 50px;
   background-color: rgb(82, 116, 255);
   letter-spacing: 0.15rem;
@@ -66,6 +81,8 @@ body main form .sign-in {
   text-align: center;
   border: none;
   width: 60%;
+  display: block;
+  margin: 30px auto 20px;
 }
 body main form .sign-in:hover {
   background-color: rgb(141, 162, 246);
@@ -123,21 +140,6 @@ body main form h1 {
   color: black;
   text-align: unset;
 }
-body main form input {
-  margin-left: 5px;
-  border: none;
-  height: 35px;
-  display: block;
-  outline: none;
-  font-size: 0.8rem;
-  width: 100%;
-}
-body main form input::-moz-placeholder {
-  padding: 5px;
-}
-body main form input::placeholder {
-  padding: 5px;
-}
 body main form .container {
   font-weight: bold;
   text-transform: normal;
@@ -159,6 +161,24 @@ body main form .container .checkbox {
   font-weight: normal;
   gap: 5px;
   color: rgb(184, 180, 180);
+  font-size: 0.8rem;
+}
+body main form .container .checkbox input {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  height: 20px;
+  color: rgb(184, 180, 180);
+  border-color: red;
+}
+body main form .container .checkbox input:checked {
+  color: rgb(141, 162, 246);
+}
+body main form .container .checkbox label {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+body main form .container .checkbox label:hover {
+  color: rgb(224, 220, 220);
 }
 body main form .container .link a {
   color: rgb(82, 116, 255);

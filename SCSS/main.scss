@@ -9,6 +9,7 @@
 
 body {
     background-color: variables.$body;
+   
 
 main {
     background-color: white;
@@ -18,7 +19,6 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 8fr 6fr;
-    height: 100vh;
     button {
         cursor: pointer;
     }
@@ -26,7 +26,9 @@ main {
         text-decoration: none;
     }
     form {
-        @include variables.flex($jus: center, $ali: unset, $dir: column, $gap: 50px); 
+        transition: variables.$transition;
+        height: 100vh;
+        @include variables.flex($jus: center, $ali: unset, $dir: column, $gap: 20px); 
         padding: 20px;
         i {
                 color: variables.$lightgray;
@@ -36,7 +38,19 @@ main {
          @include variables.flex($jus: start);
          border-bottom: 2px solid variables.$input-border;
          padding: 5px;
+        input {
+                margin-left: 5px;
+                border: none;
+                height: 35px;
+                display: block;
+                outline: none;
+                font-size: 0.8rem;
+                width: 100%;
         
+                &::placeholder {
+                    padding: 5px;
+                }
+            }
           .fa-eye-slash {
             cursor: pointer;
             &:hover {
@@ -46,18 +60,18 @@ main {
           
         }
         button[type="submit"] {
-                margin: 0 auto;
                 height: 50px;
                 background-color: variables.$blue;
                 letter-spacing: 0.15rem;
                 transition: variables.$transition;
-                
             }
             .sign-in {
                 border-radius: 5px; 
                 @include variables.text($size: 1rem, $col: white);
                 border: none;
                 width: 60%;
+                display: block;
+                margin: 30px auto 20px;
                 &:hover {
                     background-color: variables.$light-blue;
                 }
@@ -95,19 +109,7 @@ main {
         h1 {
             @include variables.text($size: 2.5rem, $align: unset)
         }
-        input {
-            margin-left: 5px;
-            border: none;
-            height: 35px;
-            display: block;
-            outline: none;
-            font-size: 0.8rem;
-            width: 100%;
-            &::placeholder {
-                padding: 5px;
-                
-            }
-        }
+        
         .container {
             @include variables.text($size: 0.9rem, $txt-trn: normal);
             @include variables.flex($jus: space-between);
@@ -116,6 +118,24 @@ main {
                font-weight: normal;
                gap: 5px;
                color: variables.$lightgray;
+               font-size: 0.8rem;
+               input {
+                cursor: pointer;
+                transition: variables.$transition;
+                height: 20px;
+                color: variables.$lightgray;
+                border-color: red;
+               }
+               input:checked {
+                    color: variables.$light-blue;
+               }
+               label {
+                cursor: pointer;
+                transition: variables.$transition;
+               }
+               label:hover {
+                color: variables.$lightengray;
+               }
             }
             .link {
                 a {
