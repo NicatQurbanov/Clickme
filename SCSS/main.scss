@@ -31,7 +31,7 @@ section {
     }
     form {
        
-        transition: variables.$transition;
+        transition: all 1s ease-in-out;
         height: 100vh;
         @include variables.flex($jus: center, $ali: unset, $dir: column, $gap: 20px); 
         padding: 20px;
@@ -187,4 +187,15 @@ section {
 
 .transition {
     transition: all 1s ease;
+}
+
+//  #secondSecform2 {
+//     transform: translateY(-200%) ;}
+
+#secondSecform1 {
+    transform: translateY(-100%);
+}
+
+#firstSecform1 {
+    transform: translateY(-100%);
 }
