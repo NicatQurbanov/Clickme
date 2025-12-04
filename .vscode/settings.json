@@ -1,0 +1,9 @@
+{
+  "output.autoReveal": false,
+  "workbench.action.showOutput": false,
+  "problemMatcher": [],
+  "workbench.panel.defaultLocation": "bottom",
+  "workbench.panel.opensMaximized": false,
+  "extensions.ignoreRecommendations": true,
+  "debug.showInlineBreakpointCandidates": false
+}

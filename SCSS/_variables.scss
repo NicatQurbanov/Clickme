@@ -1,14 +1,23 @@
-@mixin flex($jus: center, $ali: center, $dir: row) {
+@mixin flex($jus: center, $ali: center, $dir: row, $gap: unset) {
     display: flex;
     justify-content: $jus;
     align-items: $ali;
     flex-direction: $dir;
+    gap: $gap;
 }
 
-@mixin text($size) {
-    font-weight: bold;
-    text-transform: uppercase;
+@mixin text($size, $txt-trn: uppercase, $col: black, $wght: bold, $align: center) {
+    font-weight: $wght;
+    text-transform: $txt-trn;
     font-size: $size;
+    color: $col;
+    text-align: $align;
 }
 
 $blue: rgb(82, 116, 255);
+$body :  rgb(225, 232, 255);
+$lightgray :  rgb(184, 180, 180);
+$transition : all 0.5s ease;
+$input-border: rgb(152, 169, 192);
+$par: rgb(231, 231, 231);
+$light-blue: rgb(141 162 246);

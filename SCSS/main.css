@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(225, 232, 255);
+}
+body main {
+  background-color: white;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 8fr 6fr;
+  height: 100vh;
+}
+body main button {
+  cursor: pointer;
+}
+body main a {
+  text-decoration: none;
+}
+body main form {
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+}
+body main form i {
+  color: rgb(184, 180, 180);
+  transition: all 0.5s ease;
+}
+body main form .input-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  gap: unset;
+  border-bottom: 2px solid rgb(152, 169, 192);
+  padding: 5px;
+}
+body main form .input-wrapper .fa-eye-slash {
+  cursor: pointer;
+}
+body main form .input-wrapper .fa-eye-slash:hover {
+  color: rgb(82, 116, 255);
+}
+body main form button[type=submit] {
+  margin: 0 auto;
+  height: 50px;
+  background-color: rgb(82, 116, 255);
+  letter-spacing: 0.15rem;
+  transition: all 0.5s ease;
+}
+body main form .sign-in {
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  border: none;
+  width: 60%;
+}
+body main form .sign-in:hover {
+  background-color: rgb(141, 162, 246);
+}
+body main form.sign-up-container {
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: unset;
+  background-color: rgb(82, 116, 255);
+}
+body main form.sign-up-container .sign-up {
+  text-transform: normal;
+  width: 60%;
+  border: 2px solid white;
+  border-radius: 2px;
+  font-weight: bold;
+  text-transform: normal;
+  font-size: 0.8rem;
+  color: white;
+  text-align: center;
+}
+body main form.sign-up-container .sign-up:hover {
+  color: black;
+  background-color: white;
+}
+body main form.sign-up-container .smll-par {
+  font-weight: normal;
+  text-transform: normal;
+  font-size: 0.8rem;
+  color: rgb(231, 231, 231);
+  text-align: center;
+  line-height: 1.2rem;
+  margin: 30px 0;
+  width: 90%;
+}
+body main form.sign-up-container .sign-up-header {
+  align-self: start;
+  font-weight: normal;
+  text-transform: unset;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.35rem;
+}
+body main form.sign-up-container img {
+  width: 100%;
+}
+body main form h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: black;
+  text-align: unset;
+}
+body main form input {
+  margin-left: 5px;
+  border: none;
+  height: 35px;
+  display: block;
+  outline: none;
+  font-size: 0.8rem;
+  width: 100%;
+}
+body main form input::-moz-placeholder {
+  padding: 5px;
+}
+body main form input::placeholder {
+  padding: 5px;
+}
+body main form .container {
+  font-weight: bold;
+  text-transform: normal;
+  font-size: 0.9rem;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: unset;
+}
+body main form .container .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: unset;
+  font-weight: normal;
+  gap: 5px;
+  color: rgb(184, 180, 180);
+}
+body main form .container .link a {
+  color: rgb(82, 116, 255);
+  transition: all 0.5s ease;
+}
+body main form .container .link a:hover {
+  color: rgb(141, 162, 246);
+}
+body main form .links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: unset;
+}
+body main form .links a {
+  border: 2px solid rgb(184, 180, 180);
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: rgb(184, 180, 180);
+  transition: all 0.5s ease;
+}
+body main form .links a i {
+  margin-right: 5px;
+}
+body main form .links a:hover {
+  border: 2px solid rgb(82, 116, 255);
+  color: rgb(82, 116, 255);
+}
+body main form .links a:hover i {
+  color: rgb(82, 116, 255);
+}/*# sourceMappingURL=main.css.map */

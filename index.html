@@ -7,15 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/3fb78846cb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/SCSS/main.css">
 </head>
 <body>
    <main>
      <form action="#" class="registration-form">
       <h1>Sign in!</h1>
-      <input type="text" placeholder="Username" id="username">
-      <input type="password" placeholder="Password" id="password">
+      <div class="input-wrapper">
+        <i class="fa-regular fa-user"></i>
+        <input type="text" placeholder="Username" id="username">
+      </div>
+      <div class="input-wrapper">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password" id="password">
+        <i class="fa-sharp fa-solid fa-eye-slash"></i>
+      </div>
       <div class="container">
       <div class="checkbox">
         <input type="checkbox" name="" id="remember-me">
@@ -26,14 +34,17 @@
         </div>
       </div>
       </div>
-       <button type="submit">Sign In</button>
+       <button type="submit" class="sign-in">Sign In</button>
        <div class="links">
-        <a href="#">Google</a>
-        <a href="#">Facebook</a>
+        <a href="#"><i class="fa-brands fa-google"></i>Google</a>
+        <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
        </div>
   </form>
    <form action="#" class="sign-up-container">
-     <p>Hello</p>
+     <p class="sign-up-header">Hello</p>
+     <img src="/Images/img 1.png" alt="">
+     <p class="smll-par">Enter your personal details and start journey with us</p>
+     <button class="sign-up" type="submit">Sign up</button>
   </form>
    </main>
   

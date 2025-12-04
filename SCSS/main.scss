@@ -6,56 +6,148 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+body {
+    background-color: variables.$body;
+
 main {
-    width: 55%;
+    background-color: white;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+    width: 60%;
     margin: 0 auto;
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 8fr 6fr;
     height: 100vh;
+    button {
+        cursor: pointer;
+    }
     a {
         text-decoration: none;
     }
     form {
-        border: 1px solid black;
-        @include variables.flex($jus: center, $ali: space-around, $dir: column); 
+        @include variables.flex($jus: center, $ali: unset, $dir: column, $gap: 50px); 
         padding: 20px;
-        gap: 50px;
-        &.sign-up-container {
-            background-color: variables.$blue;
-        }
-        h1 {
-            @include variables.text($size: 2.4rem)
+        i {
+                color: variables.$lightgray;
+                transition: variables.$transition;
+            }
+        .input-wrapper {
+         @include variables.flex($jus: start);
+         border-bottom: 2px solid variables.$input-border;
+         padding: 5px;
+        
+          .fa-eye-slash {
+            cursor: pointer;
+            &:hover {
+                    color: variables.$blue;
+                }
+          }
+          
         }
         button[type="submit"] {
-            width: 60%;
-            margin: 0 auto;
-            height: 50px;
-            color: white;
+                margin: 0 auto;
+                height: 50px;
+                background-color: variables.$blue;
+                letter-spacing: 0.15rem;
+                transition: variables.$transition;
+                
+            }
+            .sign-in {
+                border-radius: 5px; 
+                @include variables.text($size: 1rem, $col: white);
+                border: none;
+                width: 60%;
+                &:hover {
+                    background-color: variables.$light-blue;
+                }
+            }
+        &.sign-up-container {
+            padding: 20px;
+            @include variables.flex($dir: column, $jus: start);
             background-color: variables.$blue;
-            @include variables.text($size: 1rem);
-            border-radius: 5px;
-            border: none; 
+            .sign-up {
+                    text-transform: normal;
+                    width: 60%;
+                    border: 2px solid white;
+                    border-radius: 2px;
+                    @include variables.text($size: 0.8rem, $col: white, $txt-trn: normal);
+                    &:hover {
+                       color: black;
+                       background-color: white;
+                    }
+                }
+            .smll-par {
+                @include variables.text($col: variables.$par, $size: 0.8rem, $wght: normal, $txt-trn: normal);
+                line-height: 1.2rem;
+                margin: 30px 0;
+                width: 90%;
+            }
+            .sign-up-header {
+                align-self: start;
+                @include variables.text($size: 2rem, $col: white, $wght: normal, $txt-trn: unset);
+                letter-spacing: 0.35rem;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        h1 {
+            @include variables.text($size: 2.5rem, $align: unset)
         }
         input {
+            margin-left: 5px;
             border: none;
-            border-bottom: 3px solid gray;
             height: 35px;
+            display: block;
+            outline: none;
+            font-size: 0.8rem;
+            width: 100%;
             &::placeholder {
-                padding: 20px;
+                padding: 5px;
+                
             }
         }
         .container {
+            @include variables.text($size: 0.9rem, $txt-trn: normal);
             @include variables.flex($jus: space-between);
             .checkbox {
                @include variables.flex();
+               font-weight: normal;
                gap: 5px;
+               color: variables.$lightgray;
+            }
+            .link {
+                a {
+                    color: variables.$blue;
+                    transition: variables.$transition;
+                   &:hover {
+                    color: variables.$light-blue;
+                   } 
+                }
             }
         }
         .links {
-            @include variables.flex($jus: space-around)
+            @include variables.flex($jus: space-around);
+            a {
+                border: 2px solid variables.$lightgray;;
+                border-radius: 20px;
+                padding: 10px 20px;
+                color: variables.$lightgray;
+                transition: variables.$transition;
+                i {
+                    margin-right: 5px;
+                }
+                &:hover {
+                   border: 2px solid variables.$blue;
+                   color: variables.$blue;
+                   i {
+                    color: variables.$blue;
+                   }
+                }
+            }
         }
     }
 }
 
-
+}
