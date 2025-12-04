@@ -9,16 +9,20 @@
 
 body {
     background-color: variables.$body;
-   
-
-main {
+    overflow: hidden;
+    main {
+        width: 60%;
+        position: relative;
+        margin: 0 auto;
+        height: 100vh;
+section {
     background-color: white;
     border-left: 4px solid white;
     border-right: 4px solid white;
-    width: 60%;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 8fr 6fr;
+    transition: all 0.7s ease-in-out;
+    
     button {
         cursor: pointer;
     }
@@ -26,6 +30,7 @@ main {
         text-decoration: none;
     }
     form {
+       
         transition: variables.$transition;
         height: 100vh;
         @include variables.flex($jus: center, $ali: unset, $dir: column, $gap: 20px); 
@@ -169,5 +174,17 @@ main {
         }
     }
 }
+    }
+}
 
+.defaultOpacity {
+    opacity: 1;
+}
+
+.opacity {
+    opacity: 0.2;
+}
+
+.transition {
+    transition: all 1s ease;
 }
