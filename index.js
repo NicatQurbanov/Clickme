@@ -23,6 +23,7 @@ btnSignUp.addEventListener('click', e => {
   // tag.classList.add('opacity');
   // tag.classList.remove('defaultOpacity');
   // tag.classList.add('transition');
+  
   for (let i = 0; i < arr.length; i++) {
  if (arr[i].classList.contains('opacity')){
   arr[i].classList.remove('opacity');
