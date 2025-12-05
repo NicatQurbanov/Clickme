@@ -220,14 +220,12 @@ body main section form .links a:hover i {
 
 .defaultOpacity {
   opacity: 1;
+  transition: all 1.5s ease-out;
 }
 
 .opacity {
-  opacity: 0.2;
-}
-
-.transition {
-  transition: all 1s ease;
+  opacity: 0.1;
+  transition: all 1.5s ease-out;
 }
 
 #secondSecform1 {
@@ -236,4 +234,8 @@ body main section form .links a:hover i {
 
 #firstSecform1 {
   transform: translateY(-100%);
+}
+
+.eyes {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

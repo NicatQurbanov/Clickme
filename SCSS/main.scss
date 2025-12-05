@@ -179,18 +179,14 @@ section {
 
 .defaultOpacity {
     opacity: 1;
+    transition: all 1.5s ease-out;
 }
 
 .opacity {
-    opacity: 0.2;
+    opacity: 0.1;
+    transition: all 1.5s ease-out;
 }
 
-.transition {
-    transition: all 1s ease;
-}
-
-//  #secondSecform2 {
-//     transform: translateY(-200%) ;}
 
 #secondSecform1 {
     transform: translateY(-100%);
@@ -199,3 +195,8 @@ section {
 #firstSecform1 {
     transform: translateY(-100%);
 }
+
+.eyes {
+    cursor: pointer
+}
+
